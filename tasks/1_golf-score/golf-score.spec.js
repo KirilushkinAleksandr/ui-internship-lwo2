@@ -1,4 +1,4 @@
-// import { golfScore, GOLF_SCORES } from './golf-score';
+import { golfScore, GOLF_SCORES } from './golf-score';
 
 
 xdescribe('golf-score', () => {
