@@ -1,5 +1,5 @@
 function isBoolean(value) {
-  if (typeof(value) === 'boolean') {
+  if (value === true || value === false) {
     return true;
   }
   return false;
