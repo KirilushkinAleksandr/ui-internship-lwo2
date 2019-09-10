@@ -1,5 +1,4 @@
-import { golfScore, GOLF_SCORES } from './golf-score';
-
+// import { golfScore, GOLF_SCORES } from './golf-score';
 
 xdescribe('golf-score', () => {
     test(`should return: ${GOLF_SCORES.HOLE_IN_ONE}`, () => {
