@@ -1,5 +1,5 @@
 function trimWhiteSpaces(str) {
-  return str.replace(/ /g, '');
+  return str.replace(/\s/g, '');
 }
 
 export {trimWhiteSpaces};
