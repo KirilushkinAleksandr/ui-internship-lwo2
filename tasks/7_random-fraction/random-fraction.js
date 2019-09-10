@@ -1,5 +1,5 @@
 function randomFraction() {
-  return Math.random();
+  return Math.random().toFixed(1);
 }
 
 export {randomFraction};
