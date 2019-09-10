@@ -1,4 +1,4 @@
-import { lookupProfile } from './profile-lookup';
+// import { lookupProfile } from './profile-lookup';
 
 xdescribe('profile-lookup', () => {
     test('should return: "Vos" for arguments: "Kristian", "lastName" ', () => {
