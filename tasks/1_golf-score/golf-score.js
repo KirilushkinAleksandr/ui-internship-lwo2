@@ -1,4 +1,4 @@
-let GOLF_SCORES = {
+const GOLF_SCORES = {
   HOLE_IN_ONE: 'Hole-in-one!',
   EAGLE: 'Eagle',
   BIRDIE: 'Birdie',
