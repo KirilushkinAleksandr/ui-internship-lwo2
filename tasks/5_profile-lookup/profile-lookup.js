@@ -30,10 +30,9 @@ function lookupProfile(firstName, prop) {
     if (item.firstName === firstName) {
       for (const key in item) {
         if (item.hasOwnProperty(prop)) {
-          if (key === 'firstName') {
-            continue;
+          if (key !== 'firstName') {
+            return item[prop];
           }
-          return item[prop];
         }
       }
       return 'No such property';
