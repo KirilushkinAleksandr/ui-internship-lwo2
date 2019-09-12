@@ -1,5 +1,5 @@
 function humanizeFormat(number) {
-  if (!number) {
+  if (!Number.isFinite(number)) {
     return '';
   }
   let lastDigit = number.toString();
