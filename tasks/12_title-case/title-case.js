@@ -1,7 +1,7 @@
 function titleCase(str) {
-  let arr = str.split(' ');
-  arr = arr.map((item) =>
+  let res = str.split(' ');
+  res = res.map((item) =>
     item = item[0].toUpperCase() + item.slice(1).toLowerCase());
-  return arr.join(' ');
+  return res.join(' ');
 }
 export {titleCase};
