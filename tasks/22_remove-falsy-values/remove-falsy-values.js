@@ -1,5 +1,5 @@
 function removeFalsyValues(arr) {
-  return arr.filter((item) => item ? true : false);
+  return arr.filter((item) => Boolean(item));
 }
 
 export {removeFalsyValues};
