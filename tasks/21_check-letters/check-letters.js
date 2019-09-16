@@ -1,5 +1,5 @@
 function checkLetters(input) {
-  const arr = input;
+  const arr = input.concat();
   arr[0] = arr[0].toUpperCase();
   arr[1] = arr[1].toUpperCase();
   for (let i = 0; i < arr[1].length; i++) {
