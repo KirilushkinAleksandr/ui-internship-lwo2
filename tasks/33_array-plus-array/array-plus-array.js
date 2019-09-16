@@ -1,10 +1,14 @@
 function arrayPlusArray(arr1, arr2) {
-  if (arr1.length >= arr2.length) {
-    return arr1.map((item, i) =>
-      item + (arr2[i]?arr2[i]:0));
+
+  const length = Math.max(arr1.length, arr2.length);
+
+  const res = [];
+
+  for (let i = 0; i < length; i++) {
+    res.push((arr1[i] || 0) + (arr2[i] || 0) );
   }
-  return arr2.map((item, i) =>
-    item + (arr1[i]?arr1[i]:0));
+
+  return res;
 }
 
 export {arrayPlusArray};

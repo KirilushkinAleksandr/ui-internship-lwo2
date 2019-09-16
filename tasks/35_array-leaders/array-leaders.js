@@ -1,5 +1,5 @@
-function arrayLeaders(arr) {
-  arr = arr.reverse();
+function arrayLeaders(input) {
+  const arr = input.slice();
   const leaders = [];
   arr.reduce(function(sum, item) {
     if (item > sum) {
