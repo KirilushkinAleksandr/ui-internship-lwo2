@@ -1,4 +1,4 @@
-function sortCountries (a, b) {
+function sortCountries(a, b) {
   if (a[1] === b[0]) {
     return -1;
   }

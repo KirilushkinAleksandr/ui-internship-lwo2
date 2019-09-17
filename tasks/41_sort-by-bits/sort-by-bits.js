@@ -1,15 +1,13 @@
 function sortByBits(arr) {
-  return arr.sort(function (prev, next) {
-    return countOnBits(prev) === countOnBits(next) ? prev - next : countOnBits(prev) - countOnBits(next);
+  return arr.sort(function(prev, next) {
+    const prevOnBits = countOnBits(prev);
+    const nextOnBits = countOnBits(next);
+    return prevOnBits === nextOnBits ? prev - next : prevOnBits - nextOnBits;
   });
 }
 
 function countOnBits(num) {
-  const arr = num.toString(2).split('');
-  return arr.reduce(
-    (count, item) => item === '1' ? ++count : count,
-    0
-  );
+  return num.toString(2).replace(/0/g, '').length;
 }
 
 export {sortByBits};

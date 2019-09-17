@@ -1,9 +1,9 @@
 function firstNSmallest(arr, num) {
-  let res = Array(...arr).reverse();
-  while (res.length !== num){
-    res.splice(res.indexOf(Math.max(...res)),1);
+  let res = arr.slice();
+  while (res.length > num) {
+    res.splice(res.lastIndexOf(Math.max(...res)), 1);
   }
-  return res.reverse();
+  return res;
 }
 
 export {firstNSmallest};
