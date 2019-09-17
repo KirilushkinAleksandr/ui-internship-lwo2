@@ -6,11 +6,17 @@ function minNumberToPrime(arr) {
 
 function primesToNum(num) {
   const primes = [];
-  number: for (let i = 2; i < Math.pow(num, 2); i++) {
+  let isPrime;
+  for (let i = 2; i < Math.pow(num, 2); i++) {
     for (let j = 2; j < i; j++) {
       if (i % j === 0) {
-        continue number;
+        isPrime = false;
+        break;
       }
+    }
+    if (!isPrime) {
+      isPrime = true;
+      continue;
     }
     primes.push(i);
     if (i >= num) {

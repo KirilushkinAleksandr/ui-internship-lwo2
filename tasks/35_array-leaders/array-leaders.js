@@ -1,12 +1,13 @@
 function arrayLeaders(input) {
-  const arr = input.slice();
+  const arr = input.slice().reverse();
   const leaders = [];
-  arr.reduce(function(sum, item) {
+  let sum = 0;
+  arr.forEach((item) => {
     if (item > sum) {
       leaders.push(item);
     }
-    return sum + item;
-  }, 0);
+    sum += item;
+  });
   return leaders.reverse();
 }
 

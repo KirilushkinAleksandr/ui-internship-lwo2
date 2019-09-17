@@ -1,5 +1,4 @@
 function arrayPlusArray(arr1, arr2) {
-
   const length = Math.max(arr1.length, arr2.length);
 
   const res = [];
