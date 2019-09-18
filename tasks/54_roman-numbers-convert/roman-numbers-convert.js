@@ -12,21 +12,33 @@ function convertToRoman(input) {
   res.push(returnRomanNum(num / 10, 10));
   num %= 10;
   res.push(returnRomanNum(num / 5, 5));
+  num %= 5;
+  res.push(returnRomanNum(num, 1));
   return res.join('');
 }
 
 function returnRomanNum(num, step) {
-  let noRepeat = false;
-  if (num === 4 || num === 9) {
-    noRepeat = true;
+  num = Math.floor(num);
+  if (num === 4 || num === 9 || num === 5) {
+    step *= num;
+    num = 1;
+  }
+  if (num === 5) {
+    num = 1;
   }
   switch (step) {
-    case 1: return (noRepeat ? 'IV' : 'I'.repeat(num));
-    case 5: return (noRepeat ? 'IX' : 'V'.repeat(num));
-    case 10: return (noRepeat ? 'XL' : 'X'.repeat(num));
-    case 50: return (noRepeat ? 'XC' : 'L'.repeat(num));
-    case 100: return (noRepeat ? 'CD' : 'C'.repeat(num));
-    case 500: return (noRepeat ? 'CM': 'D'.repeat(num));
+    case 1: return 'I'.repeat(num);
+    case 4: return 'IV';
+    case 5: return 'V'.repeat(num);
+    case 9: return 'IX';
+    case 10: return 'X'.repeat(num);
+    case 40: return 'XL';
+    case 50: return 'L'.repeat(num);
+    case 90: return 'XC';
+    case 100: return 'C'.repeat(num);
+    case 400: return 'CD';
+    case 500: return 'D'.repeat(num);
+    case 900: return 'CM';
     case 1000: return 'M'.repeat(num);
     default: return '';
   }
