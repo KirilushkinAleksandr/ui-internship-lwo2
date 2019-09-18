@@ -1,5 +1,5 @@
 function firstNSmallest(arr, num) {
-  let res = arr.slice();
+  const res = arr.slice();
   while (res.length > num) {
     res.splice(res.lastIndexOf(Math.max(...res)), 1);
   }
