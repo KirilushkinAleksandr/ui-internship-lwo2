@@ -3,15 +3,15 @@ function SimTime() {
   let realSimTime = 0;
   let speed = 1;
 
-  this.get = function() {
+  SimTime.prototype.get = function() {
     return simTime;
   };
 
-  this.setSpeed = function(speedUpd) {
+  SimTime.prototype.setSpeed = function(speedUpd) {
     speed = speedUpd;
   };
 
-  this.update = function(currentTime) {
+  SimTime.prototype.update = function(currentTime) {
     simTime += (currentTime - realSimTime) * speed;
     realSimTime = currentTime;
   };
