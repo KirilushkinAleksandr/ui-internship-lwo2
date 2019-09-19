@@ -1,29 +1,26 @@
 function convertToRoman(input) {
   const res = [];
   let num = input;
-  res.push(returnRomanNum(num / 1000, 1000));
+  res.push(getRomanNum(num / 1000, 1000));
   num %= 1000;
-  res.push(returnRomanNum(num / 500, 500));
+  res.push(getRomanNum(num / 500, 500));
   num %= 500;
-  res.push(returnRomanNum(num / 100, 100));
+  res.push(getRomanNum(num / 100, 100));
   num %= 100;
-  res.push(returnRomanNum(num / 50, 50));
+  res.push(getRomanNum(num / 50, 50));
   num %= 50;
-  res.push(returnRomanNum(num / 10, 10));
+  res.push(getRomanNum(num / 10, 10));
   num %= 10;
-  res.push(returnRomanNum(num / 5, 5));
+  res.push(getRomanNum(num / 5, 5));
   num %= 5;
-  res.push(returnRomanNum(num, 1));
+  res.push(getRomanNum(num, 1));
   return res.join('');
 }
 
-function returnRomanNum(num, step) {
+function getRomanNum(num, step) {
   num = Math.floor(num);
   if (num === 4 || num === 9 || num === 5) {
     step *= num;
-    num = 1;
-  }
-  if (num === 5) {
     num = 1;
   }
   switch (step) {

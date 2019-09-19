@@ -1,8 +1,8 @@
 function findLetter(str) {
-  const lets = str.split('');
-  const startCode = lets[0].charCodeAt(0);
-  for (let i = 1; i < lets.length; i++) {
-    if (lets[i].charCodeAt(0) !== startCode + i) {
+  const letters = str.split('');
+  const startCode = letters[0].charCodeAt(0);
+  for (let i = 1; i < letters.length; i++) {
+    if (letters[i].charCodeAt(0) !== startCode + i) {
       return String.fromCharCode(startCode + i);
     }
   }
