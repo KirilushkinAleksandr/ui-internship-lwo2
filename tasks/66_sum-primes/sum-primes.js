@@ -1,3 +1,12 @@
+/**
+ * @example
+ * // return 17
+ * sumPrimes(10)
+ * function sumPrimes sums all the prime numbers up to and
+ * including the provided number
+ * @param {Number} input, passed value
+ * @return {Number} sum all the prime numbers
+ */
 function sumPrimes(input) {
   let isPrime = true;
   let res = 0;

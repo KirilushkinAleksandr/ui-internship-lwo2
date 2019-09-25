@@ -1,3 +1,12 @@
+/**
+ * @example
+ * // return 5
+ * sumFibs(4)
+ * function sumFibs returns the sum of all odd Fibonacci numbers
+ * that are less than or equal to inserted number
+ * @param {Number} limit, passed value
+ * @return {Number} sum of all odd Fibonacci numbers
+ */
 function sumFibs(limit) {
   let sum = 2;
   let prev2 = 1;
