@@ -1,3 +1,16 @@
+/**
+ * @example
+ * // return [6, 766]
+ * nbMonths(2000, 8000, 1000, 1.5)
+ * function nbMonths calculates how many months will it take
+ * to save up enough money to buy the car and how much money will left over
+ * @param {Number} startPriceOld, starting price of an old car
+ * @param {Number} startPriceNew, starting price of a new car
+ * @param {Number} savingsPerMonth, monthly savings
+ * @param {Number} percentLossByMonth, the percent of monthly loss
+ * @return {Array} array of two numbers - number of months
+ * and how much money will left over
+ */
 function nbMonths(
     startPriceOld,
     startPriceNew,
@@ -21,6 +34,5 @@ function nbMonths(
     }
   }
 }
-
 
 export {nbMonths};
