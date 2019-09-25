@@ -1,25 +1,41 @@
+/**
+ * @example
+ * // return "II"
+ * convertToRoman(2)
+ * function convertToRoman converts the given number into a roman numeral
+ * @param {Number} input, arabic number
+ * @return {String} converted roman number as string
+ */
 function convertToRoman(input) {
   const res = [];
   let num = input;
-  res.push(getRomanNum(num / 1000, 1000));
+  res.push(getRomanNum(num, 1000));
   num %= 1000;
-  res.push(getRomanNum(num / 500, 500));
+  res.push(getRomanNum(num, 500));
   num %= 500;
-  res.push(getRomanNum(num / 100, 100));
+  res.push(getRomanNum(num, 100));
   num %= 100;
-  res.push(getRomanNum(num / 50, 50));
+  res.push(getRomanNum(num, 50));
   num %= 50;
-  res.push(getRomanNum(num / 10, 10));
+  if (!(res[res.length - 1] === 'XC')) {
+    res.push(getRomanNum(num, 10));
+  }
   num %= 10;
-  res.push(getRomanNum(num / 5, 5));
+  res.push(getRomanNum(num, 5));
   num %= 5;
-  res.push(getRomanNum(num, 1));
+  if (!(res[res.length - 1] === 'IX')) {
+    res.push(getRomanNum(num, 1));
+  }
   return res.join('');
 }
 
 function getRomanNum(num, step) {
-  num = Math.floor(num);
-  if (num === 4 || num === 9 || num === 5) {
+  if ((step === 50 && num >= 90) || ( step === 5 && num === 9)) {
+    if (num === 9) {
+      step = 9;
+    } else step = 90;
+  } else num = Math.floor(num / step);
+  if (num === 4 || num === 5) {
     step *= num;
     num = 1;
   }
@@ -42,3 +58,4 @@ function getRomanNum(num, step) {
 }
 
 export {convertToRoman};
+
