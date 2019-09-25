@@ -1,3 +1,12 @@
+/**
+ * @example
+ * // return TAACG
+ * pairElement('ATTGC')
+ * function DNAStrand returns the other complementary side
+ * of passed DNA chain
+ * @param {String} input, passed DNA chain string
+ * @return {String} complementary DNA string
+ */
 function DNAStrand(input) {
   const res = input.split('');
   return res.map(returnPair).join('');

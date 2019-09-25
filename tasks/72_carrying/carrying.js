@@ -1,3 +1,13 @@
+/**
+ * @example
+ * // return 5
+ * addTogether(2, 3)
+ * function addTogether sums two arguments together
+ * @param  {...any} input array of passed numbers
+ * @return {undefined} if any of passed data is not a number
+ * @return {Number} sum of numbers
+ * @return {Function} if single value is passed
+ */
 function addTogether(...input) {
   if (typeof(input[0]) !== 'number' ) {
     return;

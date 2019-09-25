@@ -1,3 +1,11 @@
+/**
+ * @example
+ * // return 30030
+ * numPrimorial(6)
+ * function numPrimorial calculates the primorial of a number
+ * @param {Number} input, passed number
+ * @return {Number} primorial of the passed number
+ */
 function numPrimorial(input) {
   let isPrime = true;
   let res = 1;
