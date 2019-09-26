@@ -7,8 +7,8 @@ class Person {
    * @param {String} fullName, person's first and last name
    */
   constructor(fullName) {
-    this.setFirstName(fullName.split(' ')[0]);
-    this.setLastName(fullName.split(' ')[1]);
+    this._firstName = fullName.split(' ')[0];
+    this._lastName = fullName.split(' ')[1];
   }
   /**
    * Getter returning person's first name
@@ -50,8 +50,9 @@ class Person {
    * @param {String} newFull, new full name value
    */
   setFullName(newFull) {
-    this.setFirstName(newFull.split(' ')[0]);
-    this.setLastName(newFull.split(' ')[1]);
+    const nameItems = newFull.split(' ');
+    this.setFirstName(nameItems[0]);
+    this.setLastName(nameItems[1]);
   }
 }
 
