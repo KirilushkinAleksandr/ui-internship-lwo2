@@ -1,3 +1,14 @@
+/**
+ * @example
+ * // return 'BBbbB'
+ * fatFingers("abABaBabAb")
+ * function fatFingers gets a string that Freddy wants to type,
+ * emulate the keyboard misses where each A supposedly
+ * pressed is replaced with CapsLock, and returns
+ * the string that Freddy actually types
+ * @param {String} input, passed string that is expected to be typed
+ * @return {String} the actual typed string
+ */
 function fatFingers(input) {
   const letters = input.split('');
   let capsLock = false;

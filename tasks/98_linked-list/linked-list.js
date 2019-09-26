@@ -1,9 +1,17 @@
+/**
+ * Class representing a linked list data - structure
+ */
 class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
     this.amount = 0;
   }
+  /**
+   * inserts new value at the tail of list
+   * @param {Number} value, passed value to be added at list head
+   * @return {Object} current object instance
+   */
   push(value) {
     const newNode = this.getNode(value);
     if (this.amount === 0) {
@@ -23,6 +31,9 @@ class LinkedList {
     this.tail = newNode;
     this.amount++;
   }
+  /**
+   * removes value from the tail of the list
+   */
   pop() {
     if (this.amount === 1) {
       this.tail = null;
@@ -32,13 +43,22 @@ class LinkedList {
     this.tail.next = null;
     this.amount--;
   }
+  /**
+   * Uses passed function for each list item
+   * @param {Function} func, callback to be used for each list item
+   */
   iterate(func) {
     let item = this.head;
     for (let i = 0; i < this.amount; i++) {
       func(item);
       item = item.next;
     }
-  }
+  }/**
+   * Inserts new node after one with specified value
+   * @param {Number} insertAfter, existing node value
+   * @param {Number} toInsert, new node value
+   * @return {Boolean} should return false if insertAfter value doesn't exist
+   */
   insertAfter(insertAfter, toInsert) {
     let foundItem;
     this.iterate((item) => {
@@ -56,6 +76,12 @@ class LinkedList {
     foundItem.next = newNode;
     this.amount++;
   }
+  /**
+   * Returns new node instance with empty links
+   * @param {Number} value, passed value of new node,
+   * 0 if nothing was passed
+   * @return {Object} new node instance
+   */
   getNode(value = 0) {
     return {
       previous: null,
@@ -63,6 +89,11 @@ class LinkedList {
       next: null,
     };
   }
+  /**
+   * Removes item with passed value from list
+   * @param {Number} input, value of removing item
+   * @return {Boolean} success of remove operation
+   */
   removeItem(input) {
     let foundItem;
     this.iterate((item) => {

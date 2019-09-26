@@ -1,3 +1,13 @@
+/**
+ * @example
+ * // return 11
+ * pairwise([1, 4, 2, 3, 0, 5], 7)
+ * function pairwise finds element pairs whose sum is equal to
+ * the second argument arg and returns the sum of their indexes
+ * @param {Array} inputArr, passed array of integers
+ * @param {Number} arg, second argument, required sum of elements
+ * @return {Number} the sum of indexes on which elements sum is equal to arg
+ */
 function pairwise(inputArr, arg) {
   const sumsIndexes = [];
   const arr = inputArr.slice();
