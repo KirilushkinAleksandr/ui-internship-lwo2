@@ -1,4 +1,4 @@
-// import { populateTable } from './populate-table';
+import { populateTable } from './populate-table';
 
 const students = [
   {
@@ -21,7 +21,7 @@ const students = [
   },
 ];
 
-xdescribe('populateTable', () => {
+describe('populateTable', () => {
   afterEach(() => {
     document.body.innerHTML = '';
   });

@@ -1,4 +1,4 @@
-// import { closestEvent } from './closest-event';
+import { closestEvent } from './closest-event';
 
 // The events array
 const events = [
@@ -13,7 +13,7 @@ const events = [
 ];
 
 // Tests
-xdescribe('closestEvent', () => {
+describe('closestEvent', () => {
   test('should return the name of the closest event', () => {
     expect(closestEvent(events, new Date(1970, 0, 1))).toBe('Challenger Spacecraft Explodes');
     expect(closestEvent(events, new Date(1986, 2, 13))).toBe('Challenger Spacecraft Explodes');

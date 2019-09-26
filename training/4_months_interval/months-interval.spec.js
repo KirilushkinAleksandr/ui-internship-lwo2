@@ -1,6 +1,6 @@
-// import { monthsInterval } from './months-interval';
+import { monthsInterval } from './months-interval';
 
-xdescribe('monthsInterval', () => {
+describe('monthsInterval', () => {
   test('should handle case: Same month & year', () => {
     expext(monthsInterval(new Date(2017, 0, 1), new Date(2017, 0, 1)))
       .toBe(['January']);
