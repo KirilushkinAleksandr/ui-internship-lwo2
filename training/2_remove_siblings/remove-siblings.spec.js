@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-// import { removeSiblings } from './remove-siblings';
+import { removeSiblings } from './remove-siblings';
 
-xdescribe('removeSiblings', () => {
+describe('removeSiblings', () => {
   beforeAll(() => {
     const dest = path.join(__dirname, './mock.html');
     const html = fs.readFileSync(dest).toString();
