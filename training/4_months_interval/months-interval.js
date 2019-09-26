@@ -9,8 +9,8 @@
  * @return {Array} array of months between passed dates
  */
 function monthsInterval(inputDate1, inputDate2) {
-  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-  'August', 'September', 'October', 'November', 'December'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
   if (Math.abs(inputDate1.getFullYear() - inputDate2.getFullYear()) > 1) {
     return months;
   }
