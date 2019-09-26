@@ -21,7 +21,7 @@ function numPrimorial(input) {
       count--;
     }
     isPrime = true;
-    if (count === 0) {
+    if (!count) {
       break;
     }
   }

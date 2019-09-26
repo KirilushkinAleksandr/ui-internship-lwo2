@@ -15,9 +15,7 @@ function sumPrimeIndexedElements(inputArr) {
           return primesSum + item;
         }
         return primesSum;
-      },
-      0
-  );
+      }, 0);
 }
 /**
  * @example
