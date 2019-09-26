@@ -50,9 +50,9 @@ class Person {
    * @param {String} newFull, new full name value
    */
   setFullName(newFull) {
-    const nameItems = newFull.split(' ');
-    this.setFirstName(nameItems[0]);
-    this.setLastName(nameItems[1]);
+    const [first, last] = newFull.split(' ');
+    this.setFirstName(first);
+    this.setLastName(last);
   }
 }
 
